@@ -16,7 +16,154 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize insights modal
     initInsightsModal();
+    
+    // Ensure genaianimation loads properly
+    if (document.getElementById('genaianimation')) {
+        loadGenAIAnimation();
+    }
 });
+
+// Load GenAI Animation separately to ensure it works
+function loadGenAIAnimation() {
+    // Create a professional animation that shows GenAI, ML, and Web Development
+    const genaiContainer = document.getElementById('genaianimation');
+    if (!genaiContainer) return;
+    
+    // Clear any existing content
+    genaiContainer.innerHTML = '';
+    
+    // Create the main container with professional styling
+    const mainContainer = document.createElement('div');
+    mainContainer.className = 'tech-showcase';
+    genaiContainer.appendChild(mainContainer);
+    
+    // Create the animated background
+    const bgElement = document.createElement('div');
+    bgElement.className = 'tech-bg';
+    mainContainer.appendChild(bgElement);
+    
+    // Create three sections for the different technologies with premium animations
+    const sections = [
+        {
+            id: 'genai-section',
+            title: 'Generative AI',
+            icon: 'brain',
+            animPath: 'https://assets6.lottiefiles.com/packages/lf20_zrqthn6o.json',
+            description: 'Next-gen AI models'
+        },
+        {
+            id: 'ml-section',
+            title: 'Machine Learning',
+            icon: 'microchip',
+            animPath: 'https://assets2.lottiefiles.com/packages/lf20_ksthc2gu.json',
+            description: 'Data-driven intelligence'
+        },
+        {
+            id: 'web-section',
+            title: 'Web Development',
+            icon: 'code',
+            animPath: 'https://assets9.lottiefiles.com/packages/lf20_cwqf5i6h.json',
+            description: 'Enterprise applications'
+        }
+    ];
+    
+    // Create the container for the sections
+    const sectionsContainer = document.createElement('div');
+    sectionsContainer.className = 'tech-sections';
+    mainContainer.appendChild(sectionsContainer);
+    
+    // Add each section with enhanced animations
+    sections.forEach((section, index) => {
+        const sectionEl = document.createElement('div');
+        sectionEl.className = 'tech-section';
+        sectionEl.id = section.id;
+        
+        // Add animation delay for staggered effect
+        sectionEl.style.animationDelay = `${index * 0.2}s`;
+        
+        const iconWrapper = document.createElement('div');
+        iconWrapper.className = 'tech-icon-wrapper';
+        
+        const iconEl = document.createElement('div');
+        iconEl.className = 'tech-icon';
+        iconEl.innerHTML = `<i class="fas fa-${section.icon}"></i>`;
+        
+        const glowEl = document.createElement('div');
+        glowEl.className = 'tech-icon-glow';
+        
+        iconWrapper.appendChild(iconEl);
+        iconWrapper.appendChild(glowEl);
+        
+        const contentEl = document.createElement('div');
+        contentEl.className = 'tech-content';
+        
+        const titleEl = document.createElement('div');
+        titleEl.className = 'tech-title';
+        titleEl.textContent = section.title;
+        
+        const descEl = document.createElement('div');
+        descEl.className = 'tech-description';
+        descEl.textContent = section.description;
+        
+        contentEl.appendChild(titleEl);
+        contentEl.appendChild(descEl);
+        
+        const animEl = document.createElement('div');
+        animEl.className = 'tech-anim';
+        
+        sectionEl.appendChild(iconWrapper);
+        sectionEl.appendChild(contentEl);
+        sectionEl.appendChild(animEl);
+        sectionsContainer.appendChild(sectionEl);
+        
+        // Load animation with enhanced settings and error handling
+        try {
+            const anim = lottie.loadAnimation({
+                container: animEl,
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                path: section.animPath,
+                rendererSettings: {
+                    preserveAspectRatio: 'xMidYMid slice'
+                }
+            });
+            
+            // Add fallback in case animation fails to load
+            anim.addEventListener('data_failed', () => {
+                console.warn(`Animation failed to load for ${section.title}`);
+                // Add fallback content
+                animEl.innerHTML = `
+                    <div class="fallback-animation">
+                        <i class="fas fa-${section.icon}" style="font-size: 40px; color: #4f46e5;"></i>
+                    </div>
+                `;
+            });
+        } catch (err) {
+            console.error(`Error loading animation for ${section.title}:`, err);
+            // Add fallback content
+            animEl.innerHTML = `
+                <div class="fallback-animation">
+                    <i class="fas fa-${section.icon}" style="font-size: 40px; color: #4f46e5;"></i>
+                </div>
+            `;
+        }
+        
+        // Add hover effect
+        sectionEl.addEventListener('mouseenter', () => {
+            sectionEl.classList.add('active');
+        });
+        
+        sectionEl.addEventListener('mouseleave', () => {
+            sectionEl.classList.remove('active');
+        });
+    });
+    
+    // Create connecting lines animation
+    const connectingLines = document.createElement('div');
+    connectingLines.className = 'connecting-lines';
+    mainContainer.appendChild(connectingLines);
+}
 
 // Initialize animations with Anime.js
 function initAnimations() {
@@ -168,6 +315,8 @@ function initServiceAnimations() {
         autoplay: true,
         path: 'https://assets5.lottiefiles.com/packages/lf20_xyadoh9h.json' // AI/Tech animation
     });
+    
+    // This section is now handled by the loadGenAIAnimation function
     
     // Logo animation - premium tech company logo focused on generative AI and software development
     const logoAnimation = lottie.loadAnimation({
