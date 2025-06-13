@@ -93,7 +93,6 @@ section {
 
 .btn-primary:hover {
   background-color: #1d4ed8;
-  transform: translateY(-2px);
 }
 
 .btn-outline {
@@ -263,6 +262,15 @@ header {
   display: flex;
   align-items: center;
   gap: 20px;
+}
+
+#requestPocBtn {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: background-color 0.2s ease;
+  background-color: #4285f4;
+  border: none;
 }
 .mobile-menu { display: none;}
 .mobile-menu-toggle {
