@@ -556,6 +556,60 @@ header {
 
 .case-study-content {
   padding: 20px;
+}
+
+.case-study-category {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--accent-color);
+  background-color: rgba(170, 128, 245, 0.1);
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.case-study-card {
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.case-study-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.case-study-image {
+  height: 200px;
+  overflow: hidden;
+  background-color: var(--light-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.case-study-animation {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.case-study-animation i {
+  transition: var(--transition);
+}
+
+.case-study-card:hover .case-study-animation i {
+  transform: scale(1.1);
+}
+
+.case-study-content {
+  padding: 20px;
 };
 }
 
@@ -697,17 +751,27 @@ header {
 .blog-image {
   height: 200px;
   overflow: hidden;
+  background-color: var(--light-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.blog-image img {
+.blog-animation {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: var(--transition);
 }
 
-.blog-card:hover .blog-image img {
-  transform: scale(1.05);
+.blog-animation i {
+  transition: var(--transition);
+}
+
+.blog-card:hover .blog-animation i {
+  transform: scale(1.1);
 }
 
 .blog-content {
@@ -718,8 +782,8 @@ header {
   display: inline-block;
   font-size: 0.8rem;
   font-weight: 500;
-  color: var(--primary-color);
-  background-color: rgba(37, 99, 235, 0.1);
+  color: var(--accent-color);
+  background-color: rgba(170, 128, 245, 0.1);
   padding: 4px 10px;
   border-radius: 20px;
   margin-bottom: 10px;
