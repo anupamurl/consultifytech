@@ -13,6 +13,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize service animations
     initServiceAnimations();
+    
+    // Initialize insights modal
+    initInsightsModal();
 });
 
 // Initialize animations with Anime.js
@@ -166,6 +169,15 @@ function initServiceAnimations() {
         path: 'https://assets5.lottiefiles.com/packages/lf20_xyadoh9h.json' // AI/Tech animation
     });
     
+    // Logo animation - premium tech company logo focused on generative AI and software development
+    const logoAnimation = lottie.loadAnimation({
+        container: document.getElementById('logo-animation'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'https://assets3.lottiefiles.com/packages/lf20_iorpbol0.json' // Premium AI/Software development logo
+    });
+    
     // Service animations
     const serviceAnimations = [
         { id: 'ai-consulting-animation', path: 'https://assets5.lottiefiles.com/packages/lf20_bXmGmI.json' },
@@ -229,4 +241,107 @@ function initServiceAnimations() {
             }
         });
     });
+}
+
+// Initialize insights modal
+function initInsightsModal() {
+    // Get all read more buttons
+    const readMoreButtons = document.querySelectorAll('.read-more-btn');
+    const insightsModal = document.querySelector('.insights-modal');
+    
+    // If modal doesn't exist, create it
+    if (!insightsModal) {
+        createInsightsModal();
+    }
+    
+    // Add click event to all read more buttons
+    readMoreButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Get insight data from data attributes
+            const title = this.getAttribute('data-title') || 'Case Study';
+            const image = this.getAttribute('data-image') || '';
+            const content = this.getAttribute('data-content') || 'No content available.';
+            
+            // Update modal content
+            const modal = document.querySelector('.insights-modal');
+            modal.querySelector('.insights-modal-header h2').textContent = title;
+            
+            const modalImage = modal.querySelector('.insights-modal-image img');
+            const fallbackImage = modal.querySelector('.insights-modal-image .image-fallback');
+            
+            if (image && image.trim() !== '') {
+                modalImage.src = image;
+                modalImage.style.display = 'block';
+                fallbackImage.style.display = 'none';
+                
+                // Handle image loading error
+                modalImage.onerror = function() {
+                    this.style.display = 'none';
+                    fallbackImage.style.display = 'flex';
+                };
+            } else {
+                modalImage.style.display = 'none';
+                fallbackImage.style.display = 'flex';
+            }
+            
+            modal.querySelector('.insights-modal-body').innerHTML = `<p>${content}</p>`;
+            
+            // Show modal
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        });
+    });
+    
+    // Close modal when clicking on close button or outside
+    document.addEventListener('click', function(e) {
+        const modal = document.querySelector('.insights-modal');
+        if (!modal) return;
+        
+        const modalContent = modal.querySelector('.insights-modal-content');
+        const closeButton = modal.querySelector('.insights-modal-close');
+        
+        if (e.target === modal || e.target === closeButton) {
+            modal.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+    });
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            const modal = document.querySelector('.insights-modal');
+            if (modal && modal.classList.contains('active')) {
+                modal.classList.remove('active');
+                document.body.style.overflow = ''; // Restore scrolling
+            }
+        }
+    });
+}
+
+// Create insights modal HTML structure
+function createInsightsModal() {
+    const modal = document.createElement('div');
+    modal.className = 'insights-modal';
+    
+    modal.innerHTML = `
+        <div class="insights-modal-content">
+            <div class="insights-modal-header">
+                <h2>Case Study Title</h2>
+                <button class="insights-modal-close">&times;</button>
+            </div>
+            <div class="insights-modal-image">
+                <img src="" alt="Case Study Image">
+                <div class="image-fallback" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(110, 203, 245, 0.2), rgba(170, 128, 245, 0.3));">
+                    <i class="fas fa-lightbulb" style="font-size: 3rem; color: #6ECBF5;"></i>
+                </div>
+            </div>
+            <div class="insights-modal-body">
+                <p>Case study content goes here.</p>
+            </div>
+        </div>
+    `;
+    
+    document.body.appendChild(modal);
 }

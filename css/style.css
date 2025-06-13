@@ -154,8 +154,35 @@ header {
   font-weight: 700;
 }
 
-.logo span {
+.logo {
+  position: relative;
+}
+
+.logo #logo-animation {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo .logo-text {
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo .primary {
   color: var(--primary-color);
+  -webkit-text-fill-color: var(--primary-color);
 }
 
 .main-menu {
@@ -567,6 +594,111 @@ header {
   padding: 4px 10px;
   border-radius: 20px;
   margin-bottom: 10px;
+}
+
+/* Case Study Modal */
+.case-study-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.case-study-modal-content {
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  max-width: 800px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: var(--shadow);
+  animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.case-study-modal-header {
+  padding: 20px;
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+}
+
+.case-study-modal-header h2 {
+  font-size: 1.8rem;
+  margin-right: 30px;
+}
+
+.case-study-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: var(--transition);
+}
+
+.case-study-modal-close:hover {
+  color: var(--accent-color);
+}
+
+.case-study-modal-image {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(110, 203, 245, 0.2), rgba(170, 128, 245, 0.3));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.case-study-modal-image i {
+  font-size: 5rem;
+  color: var(--accent-color);
+}
+
+.case-study-modal-body {
+  padding: 20px;
+}
+
+.case-study-modal-body p {
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+
+.case-study-modal-body h3 {
+  font-size: 1.3rem;
+  margin: 20px 0 10px;
+}
+
+.case-study-modal-body ul {
+  margin-bottom: 15px;
+  padding-left: 20px;
+}
+
+.case-study-modal-body ul li {
+  margin-bottom: 8px;
+  list-style-type: disc;
 }
 
 .case-study-card {
@@ -1166,6 +1298,95 @@ header {
   font-size: 60px;
   color: #4CAF50;
   margin-bottom: 20px;
+}
+
+/* Insights Modal */
+.insights-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.insights-modal.active {
+  display: flex;
+}
+
+.insights-modal-content {
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: var(--shadow);
+  animation: modalFadeIn 0.3s ease;
+}
+
+.insights-modal-header {
+  padding: 20px;
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+}
+
+.insights-modal-header h2 {
+  font-size: 1.8rem;
+  margin-right: 30px;
+}
+
+.insights-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: var(--transition);
+}
+
+.insights-modal-close:hover {
+  color: var(--accent-color);
+}
+
+.insights-modal-image {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  background-color: var(--light-bg);
+}
+
+.insights-modal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.insights-modal-image .image-fallback {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.insights-modal-body {
+  padding: 20px;
+}
+
+.insights-modal-body p {
+  margin-bottom: 15px;
+  line-height: 1.7;
 }
 
 /* Responsive Styles */

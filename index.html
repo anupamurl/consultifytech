@@ -25,7 +25,7 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <a href="#"><span>Consultify</span>Tech</a>
+                    <a href="#" class="logo-container"><div id="logo-animation"></div><span class="logo-text"><span class="primary">Consultify</span>Tech</span></a>
                 </div>
                 <nav>
                     <ul class="main-menu">
@@ -407,7 +407,7 @@
                         <span class="case-study-category">Healthcare</span>
                         <h3>AI-Powered Diagnostic Assistant</h3>
                         <p>Developed an ML-based diagnostic tool that improved detection accuracy by 40%</p>
-                        <a href="#" class="btn btn-text">Read Case Study <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="btn btn-text case-study-btn" data-case-study="healthcare">Read Case Study <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
@@ -421,7 +421,7 @@
                         <span class="case-study-category">Fintech</span>
                         <h3>Fraud Detection System</h3>
                         <p>Implemented an AI system that reduced fraudulent transactions by 87%</p>
-                        <a href="#" class="btn btn-text">Read Case Study <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="btn btn-text case-study-btn" data-case-study="fintech">Read Case Study <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
@@ -435,7 +435,7 @@
                         <span class="case-study-category">Retail</span>
                         <h3>Personalized Shopping Experience</h3>
                         <p>Created a recommendation engine that increased conversion rates by 35%</p>
-                        <a href="#" class="btn btn-text">Read Case Study <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="btn btn-text case-study-btn" data-case-study="retail">Read Case Study <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -529,7 +529,12 @@
                         <p>Exploring how generative AI is transforming business operations and customer experiences.</p>
                         <div class="blog-meta">
                             <span><i class="far fa-calendar"></i> June 15, 2023</span>
-                            <a href="#" class="btn btn-text">Read More <i class="fas fa-arrow-right"></i></a>
+                            <a href="#" class="btn btn-text read-more-btn" 
+                               data-title="The Future of Generative AI in Business" 
+                               data-image="" 
+                               data-content="Generative AI is rapidly transforming how businesses operate across industries. From content creation to product design, these technologies are enabling unprecedented levels of automation and creativity.<br><br>In this article, we explore how businesses are leveraging generative AI to create new products, enhance customer experiences, and streamline operations. We'll examine real-world case studies of companies that have successfully implemented generative AI solutions and the measurable benefits they've achieved.<br><br>Key areas where generative AI is making an impact include:<br>- Content creation and marketing<br>- Product design and development<br>- Customer service and support<br>- Data analysis and insights<br>- Process automation<br><br>As these technologies continue to evolve, businesses that strategically adopt generative AI will gain significant competitive advantages through enhanced creativity, efficiency, and innovation.">
+                               Read More <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -546,7 +551,12 @@
                         <p>Best practices for creating efficient and scalable machine learning pipelines.</p>
                         <div class="blog-meta">
                             <span><i class="far fa-calendar"></i> May 28, 2023</span>
-                            <a href="#" class="btn btn-text">Read More <i class="fas fa-arrow-right"></i></a>
+                            <a href="#" class="btn btn-text read-more-btn" 
+                               data-title="Building Scalable ML Pipelines" 
+                               data-image="" 
+                               data-content="Creating scalable machine learning pipelines is essential for organizations looking to deploy ML solutions at scale. This article explores best practices and architectural patterns for building robust ML pipelines that can handle growing data volumes and model complexity.<br><br>We cover key components of a scalable ML pipeline including:<br><br><b>Data Ingestion and Processing</b><br>- Strategies for handling large-scale data ingestion<br>- Techniques for efficient data preprocessing and feature engineering<br>- Implementing data validation and quality checks<br><br><b>Model Training and Evaluation</b><br>- Distributed training approaches<br>- Hyperparameter optimization at scale<br>- Automated model evaluation and selection<br><br><b>Deployment and Monitoring</b><br>- Containerization and orchestration<br>- Model serving architectures<br>- Real-time monitoring and performance tracking<br><br><b>MLOps Best Practices</b><br>- Version control for data and models<br>- CI/CD for machine learning<br>- Infrastructure as code<br><br>By implementing these practices, organizations can build ML pipelines that scale effectively with their business needs while maintaining reliability and performance.">
+                               Read More <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -563,7 +573,12 @@
                         <p>Navigating the ethical considerations of implementing AI in healthcare settings.</p>
                         <div class="blog-meta">
                             <span><i class="far fa-calendar"></i> April 10, 2023</span>
-                            <a href="#" class="btn btn-text">Read More <i class="fas fa-arrow-right"></i></a>
+                            <a href="#" class="btn btn-text read-more-btn" 
+                               data-title="AI Ethics in Healthcare Applications" 
+                               data-image="" 
+                               data-content="The integration of AI in healthcare presents unique ethical challenges that must be carefully addressed to ensure patient safety, privacy, and equitable care. This article examines the key ethical considerations when implementing AI solutions in healthcare settings.<br><br><b>Patient Privacy and Data Security</b><br>Healthcare AI systems require access to sensitive patient data, raising important questions about privacy protection, informed consent, and data security. We explore frameworks for responsible data handling and privacy-preserving AI techniques.<br><br><b>Algorithmic Bias and Health Equity</b><br>AI systems can perpetuate or amplify existing biases in healthcare data, potentially leading to disparities in care. We discuss approaches for identifying and mitigating bias in healthcare AI, and ensuring equitable outcomes across diverse patient populations.<br><br><b>Transparency and Explainability</b><br>The 'black box' nature of some AI algorithms poses challenges in healthcare, where understanding decision rationale is crucial. We examine methods for developing explainable AI and establishing appropriate levels of transparency for different use cases.<br><br><b>Human Oversight and Responsibility</b><br>Determining the appropriate balance between AI automation and human judgment is essential in healthcare. We explore models for human-AI collaboration and frameworks for establishing clear lines of accountability.<br><br><b>Regulatory Considerations</b><br>The evolving regulatory landscape for healthcare AI presents challenges for developers and healthcare organizations. We provide guidance on navigating current regulations and preparing for future developments.<br><br>By proactively addressing these ethical considerations, organizations can develop healthcare AI applications that not only advance medical capabilities but also uphold the highest standards of patient care and ethical practice.">
+                               Read More <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -719,6 +734,22 @@
         <i class="fas fa-arrow-up"></i>
     </a>
     
+    <!-- Case Study Modals -->
+    <div id="caseStudyModal" class="case-study-modal">
+        <div class="case-study-modal-content">
+            <button class="case-study-modal-close">&times;</button>
+            <div class="case-study-modal-header">
+                <h2 id="caseStudyTitle">Case Study Title</h2>
+            </div>
+            <div class="case-study-modal-image" id="caseStudyImage">
+                <i id="caseStudyIcon" class="fas fa-heartbeat"></i>
+            </div>
+            <div class="case-study-modal-body" id="caseStudyContent">
+                <p>Loading case study content...</p>
+            </div>
+        </div>
+    </div>
+    
     <!-- POC Request Modal -->
     <div id="pocModal" class="modal">
         <div class="modal-content">
@@ -761,6 +792,25 @@
             <h2>Request Submitted!</h2>
             <p>Thank you for your interest. Our team will contact you shortly to schedule your POC demo.</p>
             <button class="btn btn-primary close-success">Close</button>
+        </div>
+    </div>
+
+    <!-- Insights Modal -->
+    <div class="insights-modal">
+        <div class="insights-modal-content">
+            <div class="insights-modal-header">
+                <h2>Case Study Title</h2>
+                <button class="insights-modal-close">&times;</button>
+            </div>
+            <div class="insights-modal-image">
+                <img src="" alt="Insight Image">
+                <div class="image-fallback" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(110, 203, 245, 0.2), rgba(170, 128, 245, 0.3));">
+                    <i class="fas fa-lightbulb" style="font-size: 3rem; color: #6ECBF5;"></i>
+                </div>
+            </div>
+            <div class="insights-modal-body">
+                <p>Content goes here.</p>
+            </div>
         </div>
     </div>
 
@@ -819,6 +869,153 @@
                 
                 // Reset form
                 pocForm.reset();
+            });
+            
+            // Case Study Modal Functionality
+            const caseStudyModal = document.getElementById('caseStudyModal');
+            const caseStudyBtns = document.querySelectorAll('.case-study-btn');
+            const caseStudyClose = document.querySelector('.case-study-modal-close');
+            const caseStudyTitle = document.getElementById('caseStudyTitle');
+            const caseStudyIcon = document.getElementById('caseStudyIcon');
+            const caseStudyContent = document.getElementById('caseStudyContent');
+            
+            // Case study data
+            const caseStudies = {
+                healthcare: {
+                    title: 'AI-Powered Diagnostic Assistant',
+                    icon: 'fa-heartbeat',
+                    iconColor: '#6ECBF5',
+                    content: `
+                        <p>MediHealth Inc. approached ConsultifyTech with a challenge: they needed to improve the accuracy and efficiency of their diagnostic processes for early disease detection.</p>
+                        
+                        <h3>The Challenge</h3>
+                        <p>The client's existing diagnostic system had several limitations:</p>
+                        <ul>
+                            <li>Detection accuracy of only 60% for early-stage conditions</li>
+                            <li>High rate of false positives requiring additional testing</li>
+                            <li>Significant processing time for analyzing medical images</li>
+                            <li>Limited integration with existing healthcare systems</li>
+                        </ul>
+                        
+                        <h3>Our Solution</h3>
+                        <p>ConsultifyTech developed a custom ML-based diagnostic assistant that:</p>
+                        <ul>
+                            <li>Utilized deep learning models trained on extensive medical datasets</li>
+                            <li>Implemented computer vision algorithms for medical image analysis</li>
+                            <li>Created an intuitive interface for healthcare professionals</li>
+                            <li>Integrated seamlessly with existing electronic health record systems</li>
+                        </ul>
+                        
+                        <h3>Results</h3>
+                        <p>The implementation of our AI-powered diagnostic assistant resulted in:</p>
+                        <ul>
+                            <li>40% improvement in early detection accuracy (from 60% to 84%)</li>
+                            <li>65% reduction in false positives</li>
+                            <li>75% decrease in image processing time</li>
+                            <li>Estimated annual savings of $2.3 million in operational costs</li>
+                        </ul>
+                    `
+                },
+                fintech: {
+                    title: 'Fraud Detection System',
+                    icon: 'fa-chart-line',
+                    iconColor: '#AA80F5',
+                    content: `
+                        <p>A leading financial services company was experiencing increasing rates of fraudulent transactions, resulting in significant financial losses and damaged customer trust.</p>
+                        
+                        <h3>The Challenge</h3>
+                        <p>The client faced several critical issues:</p>
+                        <ul>
+                            <li>Rising fraud rates despite existing security measures</li>
+                            <li>Delays in fraud detection allowing further unauthorized transactions</li>
+                            <li>High rate of false positives causing legitimate transaction denials</li>
+                            <li>Inability to detect new and evolving fraud patterns</li>
+                        </ul>
+                        
+                        <h3>Our Solution</h3>
+                        <p>ConsultifyTech implemented an advanced AI-powered fraud detection system:</p>
+                        <ul>
+                            <li>Real-time transaction monitoring with ML algorithms</li>
+                            <li>Anomaly detection based on customer behavior patterns</li>
+                            <li>Adaptive learning to identify new fraud techniques</li>
+                            <li>Risk scoring system with configurable thresholds</li>
+                        </ul>
+                        
+                        <h3>Results</h3>
+                        <p>The new fraud detection system delivered exceptional results:</p>
+                        <ul>
+                            <li>87% reduction in successful fraudulent transactions</li>
+                            <li>92% of fraud attempts detected in real-time</li>
+                            <li>60% decrease in false positives</li>
+                            <li>Estimated annual savings of $4.7 million</li>
+                        </ul>
+                    `
+                },
+                retail: {
+                    title: 'Personalized Shopping Experience',
+                    icon: 'fa-shopping-cart',
+                    iconColor: '#CBA7F5',
+                    content: `
+                        <p>A major online retailer was struggling with low conversion rates and customer engagement despite having a large product catalog and customer base.</p>
+                        
+                        <h3>The Challenge</h3>
+                        <p>The client was facing several obstacles:</p>
+                        <ul>
+                            <li>Low conversion rate of 2.1% compared to industry average</li>
+                            <li>High cart abandonment rate of 78%</li>
+                            <li>Limited customer engagement with product recommendations</li>
+                            <li>Inability to leverage customer browsing and purchase history</li>
+                        </ul>
+                        
+                        <h3>Our Solution</h3>
+                        <p>ConsultifyTech developed a comprehensive recommendation engine:</p>
+                        <ul>
+                            <li>AI-powered product recommendation system based on user behavior</li>
+                            <li>Personalized homepage and email content for each user</li>
+                            <li>Real-time adaptation to changing customer preferences</li>
+                            <li>Cross-selling and upselling algorithms based on purchase patterns</li>
+                        </ul>
+                        
+                        <h3>Results</h3>
+                        <p>The personalized shopping experience delivered significant improvements:</p>
+                        <ul>
+                            <li>35% increase in conversion rates</li>
+                            <li>28% reduction in cart abandonment</li>
+                            <li>42% higher average order value</li>
+                            <li>53% increase in customer retention</li>
+                        </ul>
+                    `
+                }
+            };
+            
+            // Open case study modal when button is clicked
+            caseStudyBtns.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const caseStudyId = this.getAttribute('data-case-study');
+                    const caseStudy = caseStudies[caseStudyId];
+                    
+                    if (caseStudy) {
+                        caseStudyTitle.textContent = caseStudy.title;
+                        caseStudyIcon.className = `fas ${caseStudy.icon}`;
+                        caseStudyIcon.style.color = caseStudy.iconColor;
+                        caseStudyContent.innerHTML = caseStudy.content;
+                        caseStudyModal.style.display = 'flex';
+                    }
+                });
+            });
+            
+            // Close case study modal when X is clicked
+            caseStudyClose.addEventListener('click', function() {
+                caseStudyModal.style.display = 'none';
+            });
+            
+            // Close case study modal when clicking outside
+            window.addEventListener('click', function(event) {
+                if (event.target === caseStudyModal) {
+                    caseStudyModal.style.display = 'none';
+                }
             });
         });
     </script>
