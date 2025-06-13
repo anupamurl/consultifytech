@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ConsultifyTech - AI & Software Development Services. End-to-end AI, ML, and App Development Solutions.">
+    <title>ConsultifyTech - Innovate. Automate. Accelerate.</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Animation Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="#"><span>Consultify</span>Tech</a>
+                </div>
+                <nav>
+                    <ul class="main-menu">
+                        <li><a href="#home" class="active">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li class="has-dropdown">
+                            <a href="#services">Services <i class="fas fa-chevron-down"></i></a>
+                            <div class="mega-menu">
+                                <div class="mega-menu-column">
+                                    <h3>AI Services</h3>
+                                    <ul>
+                                        <li><a href="#">AI Consulting</a></li>
+                                        <li><a href="#">AI Development</a></li>
+                                        <li><a href="#">AI Chatbot Development</a></li>
+                                        <li><a href="#">AI-Powered App Development</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-menu-column">
+                                    <h3>ML & CV Solutions</h3>
+                                    <ul>
+                                        <li><a href="#">MLOps Consulting</a></li>
+                                        <li><a href="#">ML Development</a></li>
+                                        <li><a href="#">Computer Vision Solutions</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-menu-column">
+                                    <h3>Generative AI</h3>
+                                    <ul>
+                                        <li><a href="#">Generative AI Consulting</a></li>
+                                        <li><a href="#">Development & Integration</a></li>
+                                        <li><a href="#">Stable Diffusion</a></li>
+                                        <li><a href="#">Custom GPT</a></li>
+                                        <li><a href="#">Transformer Model Development</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-menu-column">
+                                    <h3>Software Development</h3>
+                                    <ul>
+                                        <li><a href="#">Web App Development</a></li>
+                                        <li><a href="#">Mobile App Development</a></li>
+                                        <li><a href="#">API Development</a></li>
+                                        <li><a href="#">Website & Portal</a></li>
+                                        <li><a href="#">Full Stack Development</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="#industries">Industries</a></li>
+                        <li><a href="#case-studies">Case Studies</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </nav>
+                <div class="header-cta">
+                    <a href="#hire" class="btn btn-primary">Hire Developers</a>
+                    <button class="mobile-menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="animate-text">Empowering Businesses With AI & Software Excellence</h1>
+                    <p class="animate-text-delay">End-to-end AI, ML, and App Development Services</p>
+                    <div class="hero-cta animate-text-delay-2">
+                        <a href="#contact" class="btn btn-primary">Get Started</a>
+                        <a href="#services" class="btn btn-outline">Explore Services</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div id="hero-animation"></div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-bg"></div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Comprehensive AI and Software Development Solutions</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- AI Services -->
+                <div class="service-category">
+                    <div class="service-category-header">
+                        <div class="service-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>AI Services</h3>
+                    </div>
+                    <div class="service-items">
+                        <div class="service-item" data-service="ai-consulting">
+                            <div class="service-item-content">
+                                <h4>AI Consulting</h4>
+                                <p>Strategic guidance for AI implementation and transformation</p>
+                            </div>
+                            <div class="service-animation" id="ai-consulting-animation"></div>
+                        </div>
+                        <div class="service-item" data-service="ai-development">
+                            <div class="service-item-content">
+                                <h4>AI Development</h4>
+                                <p>Custom AI solutions tailored to your business needs</p>
+                            </div>
+                            <div class="service-animation" id="ai-development-animation"></div>
+                        </div>
+                        <div class="service-item" data-service="chatbot">
+                            <div class="service-item-content">
+                                <h4>AI Chatbot Development</h4>
+                                <p>Intelligent conversational interfaces for customer engagement</p>
+                            </div>
+                            <div class="service-animation" id="chatbot-animation"></div>
+                        </div>
+                        <div class="service-item" data-service="ai-app">
+                            <div class="service-item-content">
+                                <h4>AI-Powered App Development</h4>
+                                <p>Smart applications with embedded AI capabilities</p>
+                            </div>
+                            <div class="service-animation" id="ai-app-animation"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- ML & CV Solutions -->
+                <div class="service-category">
+                    <div class="service-category-header">
+                        <div class="service-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h3>ML & CV Solutions</h3>
+                    </div>
+                    <div class="service-items">
+                        <div class="service-item" data-service="mlops">
+                            <div class="service-item-content">
+                                <h4>MLOps Consulting</h4>
+                                <p>Streamline ML model deployment and management</p>
+                            </div>
+                            <div class="service-animation" id="mlops-animation"></div>
+                        </div>
+                        <div class="service-item" data-service="ml-dev">
+                            <div class="service-item-content">
+                                <h4>ML Development</h4>
+                                <p>Custom machine learning models and algorithms</p>
+                            </div>
+                            <div class="service-animation" id="ml-dev-animation"></div>
+                        </div>
+                        <div class="service-item" data-service="cv">
+                            <div class="service-item-content">
+                                <h4>Computer Vision Solutions</h4>
+                                <p>Image recognition and visual data processing systems</p>
+                            </div>
+                            <div class="service-animation" id="cv-animation"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Generative AI -->
+                <div class="service-category">
+                    <div class="service-category-header">
+                        <div class="service-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Generative AI</h3>
+                    </div>
+                    <div class="service-items">
+                        <div class="service-item" data-service="gen-ai-consulting">
+                            <div class="service-item-content">
+                                <h4>Generative AI Consulting</h4>
+                                <p>Expert guidance on generative AI implementation</p>
+                            </div>
+                            <div class="service-animation" id="gen-ai-consulting-animation"></div>
+                        </div>
+                        <div class="service-item" data-service="gen-ai-dev">
+                            <div class="service-item-content">
+                                <h4>Development & Integration</h4>
+                                <p>Seamless integration of generative AI into your systems</p>
+                            </div>
+                            <div class="service-animation" id="gen-ai-dev-animation"></div>
+                        </div>
+                        <div class="service-item" data-service="stable-diffusion">
+                            <div class="service-item-content">
+                                <h4>Stable Diffusion</h4>
+                                <p>Advanced image generation and manipulation</p>
+                            </div>
+                            <div class="service-animation" id="stable-diffusion-animation"></div>
+                        </div>
+                        <div class="service-item" data-service="custom-gpt">
+                            <div class="service-item-content">
+                                <h4>Custom GPT</h4>
+                                <p>Tailored language models for specific business needs</p>
+                            </div>
+                            <div class="service-animation" id="custom-gpt-animation"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Software Development -->
+                <div class="service-category">
+                    <div class="service-category-header">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Software Development</h3>
+                    </div>
+                    <div class="service-items">
+                        <div class="service-item" data-service="web-app">
+                            <div class="service-item-content">
+                                <h4>Web App Development</h4>
+                                <p>Scalable and responsive web applications</p>
+                            </div>
+                            <div class="service-animation" id="web-app-animation"></div>
+                        </div>
+                        <div class="service-item" data-service="mobile-app">
+                            <div class="service-item-content">
+                                <h4>Mobile App Development</h4>
+                                <p>Native and cross-platform mobile solutions</p>
+                            </div>
+                            <div class="service-animation" id="mobile-app-animation"></div>
+                        </div>
+                        <div class="service-item" data-service="api-dev">
+                            <div class="service-item-content">
+                                <h4>API Development</h4>
+                                <p>Robust and secure API architecture</p>
+                            </div>
+                            <div class="service-animation" id="api-dev-animation"></div>
+                        </div>
+                        <div class="service-item" data-service="full-stack">
+                            <div class="service-item-content">
+                                <h4>Full Stack Development</h4>
+                                <p>End-to-end development services</p>
+                            </div>
+                            <div class="service-animation" id="full-stack-animation"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section id="industries" class="industries-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Industries We Serve</h2>
+                <p>Tailored Solutions for Diverse Business Sectors</p>
+            </div>
+            
+            <div class="industries-grid">
+                <div class="industry-card" data-industry="healthcare">
+                    <div class="industry-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Healthcare</h3>
+                    <p>AI-powered diagnostics, patient care optimization, and healthcare management systems</p>
+                </div>
+                
+                <div class="industry-card" data-industry="fintech">
+                    <div class="industry-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Fintech</h3>
+                    <p>Intelligent financial solutions, fraud detection, and automated trading systems</p>
+                </div>
+                
+                <div class="industry-card" data-industry="retail">
+                    <div class="industry-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>Retail</h3>
+                    <p>Customer experience enhancement, inventory management, and personalized marketing</p>
+                </div>
+                
+                <div class="industry-card" data-industry="manufacturing">
+                    <div class="industry-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3>Manufacturing</h3>
+                    <p>Predictive maintenance, quality control, and supply chain optimization</p>
+                </div>
+                
+                <div class="industry-card" data-industry="education">
+                    <div class="industry-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Education</h3>
+                    <p>Adaptive learning platforms, student performance analytics, and educational content generation</p>
+                </div>
+                
+                <div class="industry-card" data-industry="logistics">
+                    <div class="industry-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Logistics</h3>
+                    <p>Route optimization, delivery management, and logistics automation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="why-us-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Us</h2>
+                <p>The ConsultifyTech Advantage</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Expertise</h3>
+                    <p>Team of certified AI specialists and senior developers with deep domain knowledge</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Innovation</h3>
+                    <p>Cutting-edge solutions leveraging the latest technologies and methodologies</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Security</h3>
+                    <p>Robust security practices and compliance with international standards</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Agility</h3>
+                    <p>Flexible development approach adapting to changing requirements</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Support</h3>
+                    <p>24/7 technical support and dedicated account management</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section id="case-studies" class="case-studies-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Case Studies</h2>
+                <p>Success Stories That Speak Volumes</p>
+            </div>
+            
+            <div class="case-studies-grid">
+                <div class="case-study-card">
+                    <div class="case-study-image">
+                        <img src="images/case-study-1.jpg" alt="Healthcare AI Solution">
+                    </div>
+                    <div class="case-study-content">
+                        <span class="case-study-category">Healthcare</span>
+                        <h3>AI-Powered Diagnostic Assistant</h3>
+                        <p>Developed an ML-based diagnostic tool that improved detection accuracy by 40%</p>
+                        <a href="#" class="btn btn-text">Read Case Study <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="case-study-card">
+                    <div class="case-study-image">
+                        <img src="images/case-study-2.jpg" alt="Fintech Solution">
+                    </div>
+                    <div class="case-study-content">
+                        <span class="case-study-category">Fintech</span>
+                        <h3>Fraud Detection System</h3>
+                        <p>Implemented an AI system that reduced fraudulent transactions by 87%</p>
+                        <a href="#" class="btn btn-text">Read Case Study <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="case-study-card">
+                    <div class="case-study-image">
+                        <img src="images/case-study-3.jpg" alt="Retail Solution">
+                    </div>
+                    <div class="case-study-content">
+                        <span class="case-study-category">Retail</span>
+                        <h3>Personalized Shopping Experience</h3>
+                        <p>Created a recommendation engine that increased conversion rates by 35%</p>
+                        <a href="#" class="btn btn-text">Read Case Study <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Client Testimonials</h2>
+                <p>What Our Clients Say About Us</p>
+            </div>
+            
+            <div class="testimonials-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>"ConsultifyTech transformed our business with their AI solutions. Their team's expertise and dedication to our project exceeded our expectations."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="images/testimonial-1.jpg" alt="Client">
+                        </div>
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>CTO, MediHealth Inc.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>"The custom ML solution developed by ConsultifyTech helped us reduce operational costs by 30% while improving our service quality. Highly recommended!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="images/testimonial-2.jpg" alt="Client">
+                        </div>
+                        <div class="author-info">
+                            <h4>Michael Chen</h4>
+                            <p>CEO, LogiTech Solutions</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>"Working with ConsultifyTech was a game-changer for our fintech platform. Their AI expertise and agile approach delivered exceptional results on time and within budget."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="images/testimonial-3.jpg" alt="Client">
+                        </div>
+                        <div class="author-info">
+                            <h4>Emma Rodriguez</h4>
+                            <p>Product Manager, FinEdge</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Latest Insights</h2>
+                <p>Thought Leadership in AI & Technology</p>
+            </div>
+            
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="images/blog-1.jpg" alt="AI Trends">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">AI Trends</span>
+                        <h3>The Future of Generative AI in Business</h3>
+                        <p>Exploring how generative AI is transforming business operations and customer experiences.</p>
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> June 15, 2023</span>
+                            <a href="#" class="btn btn-text">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="images/blog-2.jpg" alt="Development">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">Development</span>
+                        <h3>Building Scalable ML Pipelines</h3>
+                        <p>Best practices for creating efficient and scalable machine learning pipelines.</p>
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> May 28, 2023</span>
+                            <a href="#" class="btn btn-text">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="images/blog-3.jpg" alt="Industry Insights">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">Industry Insights</span>
+                        <h3>AI Ethics in Healthcare Applications</h3>
+                        <p>Navigating the ethical considerations of implementing AI in healthcare settings.</p>
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> April 10, 2023</span>
+                            <a href="#" class="btn btn-text">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="cta" class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Need a Custom AI or App Solution?</h2>
+                <p>Let's discuss how we can help your business innovate and grow</p>
+                <a href="#contact" class="btn btn-primary btn-lg">Let's Talk</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <p>Get in Touch for a Free Consultation</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Our Location</h3>
+                            <p>123 Tech Park, Innovation Street<br>San Francisco, CA 94105</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3>Email Us</h3>
+                            <p>info@consultifytech.com<br>support@consultifytech.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Call Us</h3>
+                            <p>+1 (555) 123-4567<br>+1 (555) 987-6543</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="company" name="company" placeholder="Your Company">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <a href="#"><span>Consultify</span>Tech</a>
+                    </div>
+                    <p>Empowering businesses with AI & software excellence. Innovate. Automate. Accelerate.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#industries">Industries</a></li>
+                        <li><a href="#case-studies">Case Studies</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">AI Services</a></li>
+                        <li><a href="#">ML & CV Solutions</a></li>
+                        <li><a href="#">Generative AI</a></li>
+                        <li><a href="#">Software Development</a></li>
+                        <li><a href="#">Automation</a></li>
+                        <li><a href="#">LLM Solutions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for the latest updates and insights.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 ConsultifyTech. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
