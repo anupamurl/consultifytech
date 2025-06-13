@@ -858,6 +858,11 @@ header {
   object-fit: cover;
 }
 
+.author-image i {
+  font-size: 50px;
+  color: var(--primary-color);
+}
+
 .author-info h4 {
   font-size: 1rem;
   margin-bottom: 5px;
