@@ -80,7 +80,7 @@
                     </ul>
                 </nav>
                 <div class="header-cta">
-                    <a href="#hire" class="btn btn-primary">Hire Developers</a>
+                    <button id="requestPocBtn" class="btn btn-primary">Request for POC</button>
                     <button class="mobile-menu-toggle">
                         <span></span>
                         <span></span>
@@ -706,8 +706,109 @@
     <a href="#" class="back-to-top">
         <i class="fas fa-arrow-up"></i>
     </a>
+    
+    <!-- POC Request Modal -->
+    <div id="pocModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Request for POC</h2>
+            <p>Please fill out the form below to request a proof of concept</p>
+            
+            <form id="pocForm">
+                <div class="form-group">
+                    <input type="text" id="fullName" name="fullName" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="companyName" name="companyName" placeholder="Company Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="workEmail" name="workEmail" placeholder="Work Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="projectRequirement" name="projectRequirement" placeholder="Project Requirement / Description" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="demoDate">Preferred Date for Demo</label>
+                    <input type="date" id="demoDate" name="demoDate" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Submit Request</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Success Message Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content success-content">
+            <span class="close-modal">&times;</span>
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Request Submitted!</h2>
+            <p>Thank you for your interest. Our team will contact you shortly to schedule your POC demo.</p>
+            <button class="btn btn-primary close-success">Close</button>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <script src="js/main.js"></script>
+    <script>
+        // POC Modal Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('pocModal');
+            const successModal = document.getElementById('successModal');
+            const requestBtn = document.getElementById('requestPocBtn');
+            const closeBtns = document.querySelectorAll('.close-modal');
+            const closeSuccessBtn = document.querySelector('.close-success');
+            const pocForm = document.getElementById('pocForm');
+            
+            // Open modal when button is clicked
+            requestBtn.addEventListener('click', function() {
+                modal.style.display = 'flex';
+            });
+            
+            // Close modals when X is clicked
+            closeBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    modal.style.display = 'none';
+                    successModal.style.display = 'none';
+                });
+            });
+            
+            // Close success modal with button
+            if (closeSuccessBtn) {
+                closeSuccessBtn.addEventListener('click', function() {
+                    successModal.style.display = 'none';
+                });
+            }
+            
+            // Close modal when clicking outside
+            window.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+                if (event.target === successModal) {
+                    successModal.style.display = 'none';
+                }
+            });
+            
+            // Form submission
+            pocForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Form validation is handled by HTML5 required attributes
+                // Here you would typically send the data to your server
+                
+                // Show success message
+                modal.style.display = 'none';
+                successModal.style.display = 'flex';
+                
+                // Reset form
+                pocForm.reset();
+            });
+        });
+    </script>
 </body>
 </html>
